@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Typeahead</string>
+    <string name="searchHint">Search</string>
+</resources>
