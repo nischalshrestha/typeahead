@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context="com.bitsorific.typeahead.MainActivity">
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,24 +9,17 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/search"
+        <com.bitsorific.typeahead.AutoCompleteTextView
+            android:id="@+id/searchEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            >
-            <AutoCompleteTextView
-                android:id="@+id/searchEdit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeOptions="actionSend"
-                android:inputType="textCapSentences"
-                android:maxLength="100"
-                android:theme="@style/DropDownListTheme"
-                android:hint="@string/searchHint"
-                />
-        </android.support.design.widget.TextInputLayout>
+            style="@style/TextInputLayoutAccentStyle"
+            android:maxLength="140"
+            android:theme="@style/DropDownListTheme"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:imeOptions="actionDone"
+            android:hint="@string/searchHint"/>
 
     </RelativeLayout>
 
